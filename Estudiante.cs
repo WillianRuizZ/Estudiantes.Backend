@@ -20,7 +20,7 @@ public class CrearActualizarEstudiante
     public required string Nombre { get; set; }
 
     [Required(ErrorMessage = "El documento es obligatorio")]
-    [StringLength(50, MinimumLength = 15, ErrorMessage = "El documento debe tener entre 15 y 50 caracteres")]
+    [RegularExpression("^[0-9]+$", ErrorMessage = "El documento debe ser un número")]
     public required string Documento { get; set; }
 
     [Required(ErrorMessage = "La edad es obligatoria")]
